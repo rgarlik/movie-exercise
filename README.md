@@ -1,5 +1,6 @@
 # Movie Exercise
 Created by Richard Garlik
+
 Check out the live version [here](https://movie-exercise.vercel.app//)
 
 A [React](https://reactjs.org/) application built with [Vite](https://vitejs.dev/) and

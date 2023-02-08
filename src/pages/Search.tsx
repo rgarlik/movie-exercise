@@ -5,7 +5,7 @@ import { useInfiniteQuery } from 'react-query';
 import fetchMovies from '../lib/fetchMovies';
 import LastSearchContext from '../lib/LastSearchContext';
 import Movie from '../model/Movie';
-import { Button } from '@mui/material';
+import { Box, Button } from '@mui/material';
 
 /**
  * A page with a search bar and a list of results for that particular search query
@@ -82,9 +82,18 @@ export default function Search() {
                 movies={status === 'success' ? totalMovies : []}
             />
             {status === 'success' && totalMovies.length > 0 && (
-                <Button onClick={loadMore} variant="contained">
-                    Load more
-                </Button>
+                <Box
+                    sx={{
+                        display: 'flex',
+                        width: '100%',
+                        justifyContent: 'center',
+                        paddingTop: '2rem',
+                        paddingBottom: '3rem'
+                    }}>
+                    <Button onClick={loadMore} variant="contained">
+                        Load more
+                    </Button>
+                </Box>
             )}
         </div>
     );

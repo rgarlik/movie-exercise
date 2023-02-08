@@ -5,7 +5,7 @@ import CenteredLoading from './components/CenteredLoading';
 
 const NotFound = React.lazy(() => import('./pages/errors/NotFound'));
 const Search = React.lazy(() => import('./pages/Search'));
-const Detail = React.lazy(() => import('./pages/Favorites'));
+const Detail = React.lazy(() => import('./pages/Detail'));
 const Favorites = React.lazy(() => import('./pages/Favorites'));
 
 const routes = createBrowserRouter([

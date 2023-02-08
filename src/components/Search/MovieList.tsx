@@ -1,8 +1,5 @@
-import { SearchBarProps } from './SearchBar';
 import {
     Alert,
-    Box,
-    CircularProgress,
     Paper,
     Table,
     TableBody,

@@ -1,5 +1,3 @@
-import { UseQueryOptions } from 'react-query';
-
 /**
  * Fetches movies details based on the provided IMDB ID
  * @param id the movie's IMDB ID

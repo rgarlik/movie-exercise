@@ -16,7 +16,7 @@ export default function Search() {
     const lastSearchContext = useContext(LastSearchContext);
 
     // Scroll handler
-    const handleScroll = (event: Event) => {
+    const handleScroll = () => {
         // Remember scroll position for history reasons
         lastSearchContext.scrollPosition = window.scrollY;
     };

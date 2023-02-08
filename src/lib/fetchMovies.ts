@@ -1,5 +1,3 @@
-import { UseQueryOptions } from 'react-query';
-
 /**
  * Fetches movies based on a provided query string
  */

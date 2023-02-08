@@ -2,8 +2,6 @@ import { useParams } from 'react-router-dom';
 import {
     Alert,
     Avatar,
-    Box,
-    CircularProgress,
     List,
     ListItem,
     ListItemAvatar,
@@ -27,7 +25,7 @@ import CenteredLoading from '../components/CenteredLoading';
  */
 export default function Detail() {
     // get the id from the route url
-    let { id } = useParams();
+    const { id } = useParams();
 
     if (!id) return <Alert severity="error">Please enter a movie Id</Alert>;
 

@@ -11,6 +11,7 @@ export const defaultFavoritesValue = (): Movie[] => {
     // Check if local storage even exists
     // Get the local storage favorites array
     if (window.localStorage.getItem('favorites')) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         favoritesArray = JSON.parse(window.localStorage.getItem('favorites'));
     } else {

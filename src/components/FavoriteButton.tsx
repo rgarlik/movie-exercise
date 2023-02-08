@@ -2,7 +2,6 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import React, { useContext, useState } from 'react';
 import { IconButton } from '@mui/material';
-import { css } from '@emotion/css';
 import Movie from '../model/Movie';
 import FavoritesContext from '../lib/FavoritesContext';
 

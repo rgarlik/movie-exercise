@@ -19,6 +19,7 @@ import FlagIcon from '@mui/icons-material/Flag';
 import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import { css } from '@emotion/css';
 import FavoriteButton from '../components/FavoriteButton';
+import CenteredLoading from '../components/CenteredLoading';
 
 /**
  * A details page for a specific movie
@@ -41,11 +42,7 @@ export default function Detail() {
     }
 
     if (status === 'loading') {
-        return (
-            <Box sx={{ display: 'flex' }}>
-                <CircularProgress />
-            </Box>
-        );
+        return <CenteredLoading />;
     }
 
     const movie = data as MovieDetail;

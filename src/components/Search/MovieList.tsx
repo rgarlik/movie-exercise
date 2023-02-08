@@ -15,6 +15,7 @@ import React from 'react';
 import Movie from '../../model/Movie';
 import { Link } from 'react-router-dom';
 import FavoriteButton from '../FavoriteButton';
+import CenteredLoading from '../CenteredLoading';
 
 /**
  * Displays a list of provided movies
@@ -26,11 +27,7 @@ export default function MovieList(props: MovieListProps) {
     }
 
     if (props.loading) {
-        return (
-            <Box sx={{ display: 'flex' }}>
-                <CircularProgress />
-            </Box>
-        );
+        return <CenteredLoading />;
     }
 
     if (props.movies.length === 0) {

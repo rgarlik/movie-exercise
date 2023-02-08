@@ -10,7 +10,7 @@ import LastSearchContext from './lib/LastSearchContext';
 function App() {
     return (
         <div className="App">
-            <LastSearchContext.Provider value={{ scrollPosition: 0, query: '' }}>
+            <LastSearchContext.Provider value={{ scrollPosition: 0, query: '', page: 0 }}>
                 <FavoritesContext.Provider value={defaultFavoritesValue()}>
                     <QueryClientProvider client={queryClient}>
                         <RouterProvider router={routes} />

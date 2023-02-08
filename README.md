@@ -1,6 +1,6 @@
 # Movie Exercise
 Created by Richard Garlik
-Check out the live version [here](https://movie-exercise-i1ilwj44i-rgarlik.vercel.app/)
+Check out the live version [here](https://movie-exercise.vercel.app//)
 
 A [React](https://reactjs.org/) application built with [Vite](https://vitejs.dev/) and
 using the [MUI](https://mui.com/) component library. It provides a search interface

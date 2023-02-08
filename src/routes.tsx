@@ -1,10 +1,12 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
-import Favorites from './pages/Favorites';
-import Search from './pages/Search';
 import React from 'react';
-import Detail from './pages/Detail';
-import NotFound from './pages/errors/NotFound';
 import AppLayout from './layouts/AppLayout';
+import CenteredLoading from './components/CenteredLoading';
+
+const NotFound = React.lazy(() => import('./pages/errors/NotFound'));
+const Search = React.lazy(() => import('./pages/Search'));
+const Detail = React.lazy(() => import('./pages/Favorites'));
+const Favorites = React.lazy(() => import('./pages/Favorites'));
 
 const routes = createBrowserRouter([
     {
@@ -12,7 +14,11 @@ const routes = createBrowserRouter([
         children: [
             {
                 path: '*',
-                element: <NotFound />
+                element: (
+                    <React.Suspense fallback={<CenteredLoading />}>
+                        <NotFound />
+                    </React.Suspense>
+                )
             },
             {
                 path: '/',
@@ -20,15 +26,27 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/search',
-                element: <Search />
+                element: (
+                    <React.Suspense fallback={<CenteredLoading />}>
+                        <Search />
+                    </React.Suspense>
+                )
             },
             {
                 path: '/movie/:id',
-                element: <Detail />
+                element: (
+                    <React.Suspense fallback={<CenteredLoading />}>
+                        <Detail />
+                    </React.Suspense>
+                )
             },
             {
                 path: '/favorites',
-                element: <Favorites />
+                element: (
+                    <React.Suspense fallback={<CenteredLoading />}>
+                        <Favorites />
+                    </React.Suspense>
+                )
             }
         ]
     }

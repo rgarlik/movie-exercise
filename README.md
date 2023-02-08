@@ -31,3 +31,6 @@ If you want to serve the `./dist` folder's contents on a local web server, use:
 ```shell
 npm run preview
 ```
+
+## Linters
+`npm run lint` runs the code through eslint and `npm run format` runs the code through prettier.
